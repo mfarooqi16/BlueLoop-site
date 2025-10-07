@@ -1,0 +1,78 @@
+Build a web application called BlueLoop Intelligence, an AI-assisted dashboard for visualizing and simulating ocean-based carbon sequestration potential in coastal ecosystems like kelp forests, seagrass meadows, and mangroves.
+
+The app should include the following pages and features:
+
+Home Page
+Clean, ocean-inspired design (teal/blue color palette, minimalist style).
+
+Brief description: “BlueLoop Intelligence models and visualizes oceanic carbon capture potential using satellite data and AI.”
+
+Buttons for “Open Dashboard” and “Learn More.”
+
+Dashboard Page
+An interactive map (Google Maps or Mapbox plugin) showing coastal zones.
+
+A data panel with charts for:
+
+Sea Surface Temperature (SST)
+
+Chlorophyll-a concentration
+
+Turbidity (water clarity)
+
+A Carbon Potential Score gauge or bar that updates when users select a region.
+
+Ability to filter by date range and variable type.
+
+Option to show time-series graphs.
+
+AI Simulation Page
+Two sliders or input boxes:
+
+“Change in Sea Surface Temperature (°C)”
+
+“Change in Nutrient Levels (%)”
+
+When adjusted, recalculate and display the new Carbon Potential Score dynamically.
+
+Add placeholder logic for now (e.g., “increase temperature by 1°C decreases score by 5%”).
+
+Ensure this page can later connect to an external API endpoint for real machine learning predictions.
+
+Data Upload Page
+Users can upload CSV files (e.g., SST, chlorophyll, or local survey data).
+
+Uploaded data should appear in a simple table and update the dashboard charts.
+
+Reports Page
+Generate a summary report with key metrics and charts.
+
+Allow users to download as PDF or share via link.
+
+User Authentication
+Add sign-up, login, and user profile pages.
+
+Users can save simulation results and uploaded datasets.
+
+Admin / Settings Page (optional)
+Admin can update site content, upload reference datasets, or manage users.
+
+General Design Requirements:
+
+Use a blue/teal minimalist theme with subtle ocean background.
+
+Make the layout responsive (mobile & desktop friendly).
+
+Include sample dummy data for California coastal regions (temperature, chlorophyll, turbidity).
+
+Each chart or graph should have labels and tooltips for clarity.
+
+Future Integration Placeholder:
+
+Add a configurable field in the settings to specify an external REST API endpoint that returns predicted carbon potential (JSON).
+
+The app should be able to fetch and display predictions from that API later.
+
+App Summary Text (for landing page footer): “BlueLoop Intelligence combines open ocean data and AI modeling to help researchers and policymakers understand and forecast blue carbon potential in coastal ecosystems.”
+
+Generate the full app with navigation, consistent styling, and dummy data included.

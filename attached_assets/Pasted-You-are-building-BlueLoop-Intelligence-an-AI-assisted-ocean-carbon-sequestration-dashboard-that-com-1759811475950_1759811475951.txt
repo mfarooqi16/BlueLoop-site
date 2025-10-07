@@ -1,0 +1,143 @@
+You are building BlueLoop Intelligence, an AI-assisted ocean carbon sequestration dashboard that combines environmental data visualization, user simulations, and scientific carbon accounting.
+The goal is to allow users to explore, simulate, and report carbon sequestration potential in coastal ecosystems using real satellite data and machine learning.
+
+🌍 Core Features
+
+Home Page: Ocean-inspired interface with project intro, “Explore Dashboard” button, and educational section on blue carbon.
+
+Interactive Dashboard:
+
+Mapbox map of coastal California.
+
+Clickable regions displaying Sea Surface Temperature (SST), Chlorophyll-a, and Turbidity charts.
+
+Dynamic Carbon Potential Score gauge that updates based on map selections.
+
+AI Simulation Page:
+
+Sliders for temperature, turbidity, and nutrient levels.
+
+“Calculate Potential” button → calls backend ML API.
+
+Returns predicted carbon sequestration potential (tons C/km²/yr) and CO₂e.
+
+Display a confidence or uncertainty bar.
+
+Reports Page:
+
+Summary charts + map snapshot + user simulation results.
+
+Button to export as PDF (“Generate Report”).
+
+Data Upload Page:
+
+Upload custom CSV (SST, Chl-a, etc.) → preview and visualize.
+
+Integrates uploaded data into charts or allows recalculation with AI model.
+
+User Authentication:
+
+Sign-up/login via Supabase Auth (preferred) or Replit Auth fallback.
+
+Each user can save multiple simulations and name them.
+
+Saved simulations re-load on login.
+
+Database Layer:
+
+Store user simulations, uploaded datasets, and generated reports in Supabase.
+
+Each record includes: user_id, timestamp, region, inputs, predicted_carbon, co2eq.
+
+PDF Generation:
+
+Export simulation report as PDF including charts and map region.
+
+Include carbon potential, CO₂e, and uncertainties.
+
+⚙️ Backend Integration
+
+Connect to FastAPI-based backend (to be deployed on Render or Cloud Run):
+
+Endpoint: /predict?SST=<>&Chlorophyll=<>&Turbidity=<>
+
+Returns JSON:
+
+{
+  "CarbonPotential": 24.5,
+  "CO2eq": 90.0,
+  "Uncertainty": 0.12
+}
+
+
+Display the results dynamically in the AI Simulation Page and Dashboard gauge.
+
+Handle errors gracefully (e.g., if backend is offline).
+
+🧠 Carbon Accounting Logic
+
+1 ton Carbon = 3.67 tons CO₂e.
+
+Include permanence slider (default 0.8 = 80% stored).
+
+Compute Adjusted_CO2eq = CO2eq * Permanence.
+
+Display both raw and adjusted CO₂e in the dashboard.
+
+🗺️ Visualization Libraries
+
+Use Mapbox GL JS or Leaflet for maps.
+
+Use Recharts or Plotly for charts (temperature, chlorophyll, turbidity).
+
+Use a gauge component (e.g., react-circular-progressbar) for the Carbon Potential Score.
+
+Use TailwindCSS for styling (ocean color palette: teal, navy, coral accents).
+
+📦 Architecture Summary
+Frontend: React (Vite + Tailwind)
+Auth: Supabase Auth
+DB: Supabase Postgres (Simulations, Uploads)
+API: FastAPI backend (hosted on Render)
+Visualization: Mapbox + Recharts
+File Storage: Supabase Storage
+PDF Reports: react-pdf or jsPDF
+Hosting: Vercel or Replit (frontend)
+
+🧩 Extra Features
+
+“Compare Scenarios” view → side-by-side charting of two saved simulations.
+
+“Global Explorer” (optional) → global heatmap showing high carbon potential zones.
+
+Tooltip explanations (educational layer for each metric).
+
+AI Assistant widget (“Explain My Score”) → optional GPT-based helper to interpret results.
+
+🧑‍💻 Development Instructions
+
+Scaffold project using React + Vite + Tailwind.
+
+Add routes: /, /dashboard, /simulation, /upload, /reports.
+
+Integrate Supabase for Auth, Database, and Storage.
+
+Add a config.js for API endpoints and keys.
+
+Connect /predict API call in Simulation and Dashboard.
+
+Implement report generation using react-pdf.
+
+Test the app end-to-end with mock data.
+
+✅ Goal
+
+Deliver a fully functional MVP of BlueLoop Intelligence that:
+
+Visualizes satellite data for ocean carbon monitoring.
+
+Simulates sequestration potential using an ML backend.
+
+Allows user-authenticated uploads, saved simulations, and PDF report exports.
+
+Provides scientific transparency and educational context.
