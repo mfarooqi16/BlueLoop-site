@@ -46,7 +46,7 @@ export default function Dashboard() {
             Dashboard
           </h1>
           <p className="text-muted-foreground">
-            Explore California coastal regions and view environmental data
+            Explore major global upwelling zones and view environmental data
           </p>
         </div>
 
