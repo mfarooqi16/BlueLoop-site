@@ -388,18 +388,54 @@
 
   /* Glassmorphism utilities */
   .glass {
-    @apply backdrop-blur-xl bg-white/70 dark:bg-navy-900/70 border border-white/20 dark:border-white/10;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .glass {
+    background-color: rgba(14, 20, 35, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .glass-card {
-    @apply backdrop-blur-2xl bg-white/80 dark:bg-navy-900/80 border border-white/30 dark:border-white/15 shadow-xl;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px -8px rgba(31, 44, 70, 0.16), 0 12px 24px -8px rgba(31, 44, 70, 0.10);
+  }
+
+  .dark .glass-card {
+    background-color: rgba(14, 20, 35, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.9), 0 12px 24px -8px rgba(0, 0, 0, 0.8);
   }
 
   .glass-nav {
-    @apply backdrop-blur-md bg-white/90 dark:bg-navy-900/90 border-b border-white/20 dark:border-white/10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .glass-nav {
+    background-color: rgba(14, 20, 35, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .glass-elevated {
-    @apply backdrop-blur-2xl bg-white/85 dark:bg-navy-900/85 border border-white/40 dark:border-white/20 shadow-2xl;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 32px 64px -12px rgba(31, 44, 70, 0.20);
+  }
+
+  .dark .glass-elevated {
+    background-color: rgba(14, 20, 35, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 1.0);
   }
 }
