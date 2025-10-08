@@ -76,6 +76,32 @@
   --chart-4: 16 85% 55%;
   --chart-5: 38 85% 48%;
 
+  --ocean-50: 186 70% 98%;
+  --ocean-100: 186 65% 92%;
+  --ocean-200: 186 60% 85%;
+  --ocean-300: 186 65% 70%;
+  --ocean-400: 186 68% 55%;
+  --ocean-500: 186 70% 45%;
+  --ocean-600: 186 72% 38%;
+  --ocean-700: 186 70% 30%;
+  --ocean-800: 186 65% 22%;
+  --ocean-900: 186 60% 15%;
+
+  --navy-50: 215 60% 98%;
+  --navy-100: 215 58% 92%;
+  --navy-200: 215 55% 85%;
+  --navy-300: 215 60% 60%;
+  --navy-400: 215 62% 45%;
+  --navy-500: 215 65% 35%;
+  --navy-600: 215 68% 28%;
+  --navy-700: 215 65% 25%;
+  --navy-800: 215 60% 18%;
+  --navy-900: 215 55% 12%;
+
+  --coral-400: 16 88% 72%;
+  --coral-500: 16 85% 62%;
+  --coral-600: 16 82% 52%;
+
   --font-sans: Inter, Open Sans, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: JetBrains Mono, Menlo, monospace;
@@ -347,5 +373,22 @@
   .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
   .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
     inset: -1px;
+  }
+
+  /* Glassmorphism utilities */
+  .glass {
+    @apply backdrop-blur-xl bg-white/70 dark:bg-navy-900/70 border border-white/20 dark:border-white/10;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-2xl bg-white/80 dark:bg-navy-900/80 border border-white/30 dark:border-white/15 shadow-xl;
+  }
+
+  .glass-nav {
+    @apply backdrop-blur-md bg-white/90 dark:bg-navy-900/90 border-b border-white/20 dark:border-white/10;
+  }
+
+  .glass-elevated {
+    @apply backdrop-blur-2xl bg-white/85 dark:bg-navy-950/85 border border-white/40 dark:border-white/20 shadow-2xl;
   }
 }
