@@ -4,9 +4,10 @@
 **System-Based with Scientific Dashboard References**: Drawing from Material Design's data visualization principles and professional scientific dashboards (NASA Earth Observatory, NOAA Climate), while maintaining ocean-inspired aesthetics for environmental credibility and engagement.
 
 ## Core Design Principles
+- **Glassmorphism Aesthetic**: Modern frosted glass panels with backdrop blur for sleek, contemporary feel
 - **Scientific Credibility**: Clean, professional interface that establishes trust with researchers and policymakers
 - **Data Clarity**: Prioritize readability and comprehension of complex environmental data
-- **Ocean Connection**: Subtle oceanic theming that reinforces the blue carbon mission without overwhelming functionality
+- **Ocean Connection**: Subtle oceanic theming with depth and transparency effects
 - **Educational Transparency**: Every metric includes context and explanation
 
 ---
@@ -82,11 +83,12 @@ Use Tailwind units: **2, 4, 6, 8, 12, 16, 20, 24** for consistent rhythm
 - **Nav Items**: Subtle hover with teal underline animation, active state with bg-ocean-50
 - **User Profile**: Avatar in top-right with dropdown for saved simulations and logout
 
-### Cards & Surfaces
-- **Dashboard Cards**: bg-white dark:bg-surface rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm
-- **Data Cards**: Elevated with shadow-md, hover:shadow-lg transition
-- **Metric Cards**: Compact with large monospace numbers, labels above, subtle gradient background
-- **Simulation Results**: Bordered with left accent (border-l-4 border-l-ocean-500)
+### Cards & Surfaces (Glassmorphism)
+- **Glass Cards**: backdrop-blur-xl bg-white/70 dark:bg-navy-900/70 with border border-white/20 dark:border-white/10
+- **Elevated Glass**: backdrop-blur-2xl bg-white/80 dark:bg-navy-900/80 for floating panels
+- **Metric Cards**: Glass effect with large monospace numbers, subtle gradient overlays
+- **Simulation Results**: Glass panels with ocean-teal gradient borders
+- **Shadows**: Use subtle shadow-xl with colored tints (shadow-ocean-500/10) for depth
 
 ### Interactive Map
 - **Mapbox**: Dark water style for dark mode, light ocean style for light mode
