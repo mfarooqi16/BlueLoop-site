@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-ocean-50 dark:bg-navy-800">
+      <section className="py-16 bg-gradient-to-br from-ocean-50 via-background to-navy-50 dark:from-navy-900 dark:via-background dark:to-ocean-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -82,7 +82,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white dark:bg-navy-900 rounded-xl p-8 shadow-lg">
+            <div className="glass-elevated rounded-xl p-8">
               <div className="aspect-video bg-gradient-to-br from-ocean-100 to-navy-100 dark:from-ocean-900 dark:to-navy-900 rounded-lg flex items-center justify-center">
                 <div className="text-center">
                   <Waves className="h-16 w-16 text-ocean-500 mx-auto mb-4" />

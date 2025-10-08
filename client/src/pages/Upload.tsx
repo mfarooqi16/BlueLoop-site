@@ -4,7 +4,7 @@ import { Info } from "lucide-react";
 
 export default function Upload() {
   return (
-    <div className="min-h-screen pt-16 bg-background">
+    <div className="min-h-screen pt-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-navy-700 dark:text-ocean-100 mb-2">

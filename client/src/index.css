@@ -265,6 +265,17 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    background: linear-gradient(180deg, 
+      hsl(var(--background)) 0%, 
+      hsl(var(--ocean-50)) 50%, 
+      hsl(var(--background)) 100%);
+  }
+  
+  body.dark {
+    background: linear-gradient(180deg, 
+      hsl(var(--background)) 0%, 
+      hsl(var(--navy-900)) 50%, 
+      hsl(var(--background)) 100%);
   }
 }
 
@@ -389,6 +400,6 @@
   }
 
   .glass-elevated {
-    @apply backdrop-blur-2xl bg-white/85 dark:bg-navy-950/85 border border-white/40 dark:border-white/20 shadow-2xl;
+    @apply backdrop-blur-2xl bg-white/85 dark:bg-navy-900/85 border border-white/40 dark:border-white/20 shadow-2xl;
   }
 }
